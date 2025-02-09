@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">ease</div>
+
+    <style>
+      
+        .box{
+            margin: 200px;
+
+
+            height: 200px;
+            width: 200px;
+            background: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+
+           /* transition-property: width;
+            transition-duration: 2s;
+            transition-timing-function: steps(6);
+            transition-delay: 0s; */
+
+          /*  transition: transform 2s ease 0s,
+            background-color 2s ease 0s, scale 2s ease;*/
+
+            transition: all 1s ease-in-out;
+        }
+
+        .box:hover{
+            transform: rotate(135deg);
+            background-color: coral;
+            scale: 2;
+        }
+
+    </style>
+</body>
+</html>

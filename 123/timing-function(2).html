@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Timing Function CSS</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 50px;
+      background-color: lightblue;
+      position: relative;
+      left: 0;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes move {
+      0% {
+        left: 0;
+      }
+
+      100% {
+        left: calc(100% - 100px);
+      }
+    }
+
+    .ease {
+      animation-name: move;
+      animation-timing-function: ease;
+    }
+
+    .linear {
+      animation-name: move;
+      animation-timing-function: linear;
+    }
+
+    .ease-in{
+      animation-name: move;
+      animation-timing-function: ease-in;
+    }
+
+    .ease-out{
+      animation-name: move;
+      animation-timing-function: ease-in-out;
+    }
+
+    .ease-in-out{
+      animation-name: move;
+      animation-timing-function: ease-in-out;
+    }
+
+    .steps{
+      animation-name: move;
+      animation-timing-function: steps(6);
+    }
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box ease">ease</div>
+        <div class="box linear">linear</div>
+        <div class="box ease-in">ease-in</div>
+        <div class="box ease-out">ease-out</div>
+        <div class="box ease-in-out">ease-in-out</div>
+        <div class="box steps">step</div>
+    </div>
+</body>
+</html>

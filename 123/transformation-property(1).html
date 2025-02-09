@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Transformasi CSS</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 100px;
+      margin: 100px;
+      align-items: center;
+    }
+   
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      border: 2px solid #333;
+      transition: transform 2s ease;
+    }
+
+    .box:hover{
+      transform: scale(1.1);
+    }
+
+    .translate {
+      transform: translate(30px, 20px);
+    }
+
+    .skew {
+      transform: skew(40deg, 70deg);
+    }
+
+    .rotate {
+      transform: rotate(0.75turn);
+    }
+
+    .scale{
+      transform: scale(7);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Normal</div>
+    <div class="box translate">Translate</div>
+    <div class="box skew">Skew</div>
+    <div class="box rotate">Rotate</div>
+    <div class="box scale">Scale</div>
+  </div>
+</body>
+</html>
